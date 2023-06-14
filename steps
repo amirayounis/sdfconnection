@@ -1,0 +1,10 @@
+1-conect to database 
+--------crud ----------
+2-get data --->display
+3- store data 
+4-upadate
+5-delete
+<!-- lab1 -->
+database iti
+table items(id ,name ,price ,is_avilabe,picture)
+dasbord --->items(get data in table ,add item(validation(price>=500)))
