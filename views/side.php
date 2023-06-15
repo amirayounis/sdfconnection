@@ -1,11 +1,9 @@
-<?php
-require_once("../../controls/user.php")
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+/  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     body {
       padding: 20px;
@@ -88,41 +86,18 @@ require_once("../../controls/user.php")
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Dashboard</h2>
+<div class="sidebar">
+    <h2><?php echo $_SESSION["user"]["name"]?></h2>
+    <?php 
+     if(isset($_SESSION["user"]))
+     echo "<a href='http://localhost/sdfconnection/controls/auth.php?action=logout'>logout</a>";
+    else
+    echo "<a href='http://localhost/sdfconnection/views/loginform.php'>login</a>";
+    ?>
+    
     <ul>
       <li><a href="http://localhost/sdfconnection/views/users/">Users</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#vendors">Vendors</a></li>
-      <li><a href="#orders">Orders</a></li>
+      <li><a href="http://localhost/sdfconnection/views/items/">Items</a></li>
+     
     </ul>
   </div>
-
-  <div class="content">
-    <h1>Dashboard</h1>
-
-    <div id="users" class="table-container">
-      
-      <form method="post" action="../../controls/adduser.php"  enctype="multipart/form-data"> 
-    Name: <input type="text" name="name" >
-    <br>
-    <br>
-    Email: <input type="email" name="email" >
-    <br>
-    <br>
-    password: <input type="password" name="pass" >
-    <br>
-    <br>
-    personal image: <input type="file" name="image" >
-    <br>
-    <br>
-    <input type="submit" name="submit" value="register" >
-    </form>
-
-    
-
-
-
-    
-</body>
-</html>

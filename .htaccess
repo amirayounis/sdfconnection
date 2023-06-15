@@ -1,0 +1,10 @@
+# RewiteEngine On
+# RewiteBase /sdfconnection/
+# RewiteRule ^index\\.php$ - [L]
+# RewiteCond %{REQUEST_FILENAME} !-f
+# RewiteCond %{REQUEST_FILENAME} !-d
+# RewiteRule ^(.*)$ index.php
+# RewiteRule . /sdfconnection/index.php [L]
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.*)＄ index.php

@@ -8,4 +8,5 @@ require_once("config.php");
  $stmt->execute();
 //  fetch data
 $users=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
